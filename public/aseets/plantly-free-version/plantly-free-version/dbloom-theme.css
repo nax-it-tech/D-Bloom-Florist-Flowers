@@ -1,0 +1,300 @@
+/*
+ * D'Bloom Florist – Custom Theme Override
+ * Palette: #FFC1CC (Pink Blush), #A8B5A2 (Sage Green), #F8F1F1 (Cream)
+ */
+
+/* ── Header fixed overlap fix ── */
+header#header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent !important;
+    border-bottom: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+    height: auto !important;
+    min-height: 80px;
+}
+/* Saat scroll ke bawah, header dapat background semi-transparan */
+header#header.fixed.scrolled {
+    background-color: rgba(248, 241, 241, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+/* Header wrap tinggi dan center */
+#header-wrap {
+    min-height: 80px;
+    padding: 0 40px;
+    align-items: center !important;
+}
+/* Logo tinggi sesuai header */
+.main-logo {
+    height: 80px !important;
+    padding: 0 !important;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+}
+/* Navbar center vertikal */
+nav#navbar {
+    height: 80px;
+    align-items: center !important;
+}
+/* Menu list center */
+nav#navbar ul.menu-list {
+    height: 80px;
+    align-items: center !important;
+}
+/* ── Navbar link color ── */
+#navbar .nav-link {
+    color: #3a3a3a !important;
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+    line-height: 1 !important;
+    transition: color 0.2s ease;
+}
+#navbar .nav-link:hover {
+    color: #FFC1CC !important;
+    transition: color 0.2s ease;
+}
+#navbar .nav-link.active-menu {
+    color: #FFC1CC !important;
+    font-weight: 600;
+    border-bottom: 2px solid #A8B5A2;
+    padding-bottom: 26px !important;
+}
+
+/* ── Dropdown menu ── */
+.dropdown-menu {
+    background-color: #F8F1F1 !important;
+    border: 1px solid #f0e4e7 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+    padding: 8px 0 !important;
+    min-width: 160px;
+}
+.dropdown-item {
+    color: #3a3a3a !important;
+    padding: 10px 20px !important;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.dropdown-item:hover,
+.dropdown-item.active-menu {
+    background-color: #FFC1CC !important;
+    color: #3a3a3a !important;
+}
+/* Dropdown toggle active saat salah satu child aktif */
+.nav-link.dropdown-toggle.active-menu {
+    color: #FFC1CC !important;
+    font-weight: 600;
+    border-bottom: 2px solid #A8B5A2;
+    padding-bottom: 26px !important;
+}
+.main-logo {
+    margin-right: 30px;
+    white-space: nowrap;
+}
+.main-logo a {
+    font-family: 'Arapey', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3a3a3a !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+.main-logo a:hover {
+    color: #FFC1CC !important;
+}
+/* Dorong konten agar tidak ketutup header fixed */
+body {
+    padding-top: 80px;
+}
+/* Hero home: naikkan balik agar gambar mulai dari atas */
+section#intro.intro-swiper {
+    margin-top: -80px;
+}
+/* Section pertama halaman dalam: hapus margin-top besar */
+section.first-section {
+    margin-top: 0 !important;
+}
+
+/* ── CSS Variables Override ── */
+:root {
+    --accent-color       : #F8F1F1;
+    --theme-color        : #FFC1CC;
+    --swiper-theme-color : #FFC1CC;
+    --dark-color         : #3a3a3a;
+    --grey-color         : #d4c8c8;
+}
+
+/* ── Body background ── */
+body {
+    background-color: #F8F1F1;
+    --bs-light: #F8F1F1;
+    --bs-primary: #A8B5A2;
+    --bs-primary-rgb: 168, 181, 162;
+}
+
+/* ── Text primary color ── */
+.text-pri {
+    color: #FFC1CC !important;
+}
+
+/* ── bg-accent sections ── */
+.bg-accent {
+    background-color: #F8F1F1 !important;
+}
+
+/* ── Buttons ── */
+.btn.btn-black {
+    background: #3a3a3a;
+    color: #fff;
+}
+.btn.btn-black:hover {
+    background-color: #FFC1CC;
+    color: #3a3a3a;
+}
+
+.btn.btn-common,
+.btn.btn-accent {
+    background: #FFC1CC;
+    color: #3a3a3a;
+}
+.btn.btn-common:hover,
+.btn.btn-accent:hover {
+    background: #A8B5A2;
+    color: #fff;
+}
+
+/* ── Add to cart button ── */
+a.add-to-cart {
+    color: #A8B5A2;
+}
+a.add-to-cart:hover {
+    color: #FFC1CC;
+}
+
+/* ── Product price ── */
+.product-price {
+    color: #A8B5A2;
+}
+
+/* ── Section title underline / accent ── */
+.section-title {
+    color: #3a3a3a;
+}
+
+/* ── Header ── */
+#header {
+    background-color: #F8F1F1 !important;
+    border-bottom: 1px solid #f0e4e7;
+}
+
+/* ── Swiper pagination dots ── */
+.swiper-pagination-bullet-active {
+    background: #FFC1CC !important;
+}
+
+/* ── Swiper nav arrows ── */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #FFC1CC !important;
+}
+
+/* ── Like / heart icon ── */
+.icon-like-button,
+.icon-liked-button {
+    color: #FFC1CC;
+}
+
+/* ── Testimonial quote ── */
+.testimonials-inner q {
+    color: #5a5a5a;
+}
+.testimonials-inner .name {
+    color: #FFC1CC;
+}
+
+/* ── Footer ── */
+#footer.bg-accent,
+#footer-bottom.bg-accent {
+    background-color: #F8F1F1 !important;
+}
+#footer h5 {
+    color: #3a3a3a;
+}
+#footer .menu-list a {
+    color: #888;
+}
+#footer .menu-list a:hover {
+    color: #FFC1CC;
+}
+#footer .footer-logo {
+    filter: none;
+}
+
+/* ── Why-us section list numbers ── */
+.list-number {
+    color: #FFC1CC;
+    font-weight: 700;
+}
+
+/* ── Services icons ── */
+.services-item i {
+    color: #A8B5A2;
+}
+.services-title {
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+/* ── Post item hover ── */
+.image-hvr-effect:hover img {
+    opacity: 0.85;
+}
+.post-title a:hover {
+    color: #FFC1CC !important;
+}
+
+/* ── Form controls focus ── */
+.form-control:focus {
+    border-color: #FFC1CC !important;
+    box-shadow: 0 0 0 0.2rem rgba(255,193,204,0.25) !important;
+}
+
+/* ── Scroll up button ── */
+#scroll-up {
+    background-color: #FFC1CC !important;
+    color: #fff !important;
+}
+#scroll-up:hover {
+    background-color: #A8B5A2 !important;
+}
+
+/* ── Association / filter button bar ── */
+#association .btn.btn-black,
+#association .btn.btn-rounded {
+    background: #A8B5A2;
+    color: #fff;
+    border: none;
+}
+#association .btn.btn-black:hover,
+#association .btn.btn-rounded:hover {
+    background: #FFC1CC;
+    color: #3a3a3a;
+}
+
+/* ── Product item hover border ── */
+.product-item:hover {
+    border-color: #FFC1CC;
+}
+
+/* ── Banner title ── */
+.banner-title {
+    color: #3a3a3a;
+}
