@@ -381,7 +381,7 @@ section#intro .swiper-button-next {
     transform: translateY(-50%) !important;
 }
 
-/* ── Hamburger button – sembunyikan di desktop ── */
+/* ── Hamburger button – Bootstrap toggler ── */
 .navbar-toggler,
 #menu-toggle {
     background: none;
@@ -393,29 +393,25 @@ section#intro .swiper-button-next {
     gap: 5px;
     z-index: 10000;
 }
-.toggler-bar {
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: #3a3a3a;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-/* Animasi hamburger → X saat active */
-#menu-toggle.active .toggler-bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-#menu-toggle.active .toggler-bar:nth-child(2) {
-    opacity: 0;
-}
-#menu-toggle.active .toggler-bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
+/* Sembunyikan toggler di desktop, tampilkan di mobile */
 @media (max-width: 991px) {
-    #menu-toggle {
+    .navbar-toggler {
         display: flex !important;
+        flex-direction: column;
+        gap: 5px;
         margin-left: auto;
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        z-index: 10000;
+    }
+    /* Sembunyikan menu desktop */
+    .main-menu.d-none.d-lg-block {
+        display: none !important;
+    }
+    .right-element.icon-element.d-none.d-lg-flex {
+        display: none !important;
     }
 }
 /* Animasi hamburger → X saat active */
