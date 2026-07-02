@@ -18,6 +18,20 @@ class App extends BaseConfig
      */
     public string $baseURL = 'http://localhost:8080/';
 
+    public function __construct()
+    {
+        parent::__construct();
+        // Pakai APP_URL dari environment variable Railway jika tersedia
+        if (! empty($_ENV['APP_URL'])) {
+            $url = $_ENV['APP_URL'];
+            // Pastikan ada https:// dan trailing slash
+            if (! str_starts_with($url, 'http')) {
+                $url = 'https://' . $url;
+            }
+            $this->baseURL = rtrim($url, '/') . '/';
+        }
+    }
+
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
