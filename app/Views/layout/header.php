@@ -50,13 +50,14 @@ function isActive(string $path, string $current): string {
 			</a>
 		</div>
 
+		<!-- Hamburger – di luar nav agar tidak kena hide dari style.css -->
+		<button id="menu-toggle" aria-label="Buka menu" style="background:none;border:none;cursor:pointer;padding:8px;display:none;flex-direction:column;gap:5px;margin-left:auto;z-index:10000;">
+			<span class="toggler-bar"></span>
+			<span class="toggler-bar"></span>
+			<span class="toggler-bar"></span>
+		</button>
+
 		<nav id="navbar">
-			<!-- Hamburger toggle untuk mobile -->
-			<button class="navbar-toggler" type="button" id="menu-toggle" aria-label="Toggle navigation">
-				<span class="toggler-bar"></span>
-				<span class="toggler-bar"></span>
-				<span class="toggler-bar"></span>
-			</button>
 
 			<div class="main-menu" id="navigation">
 				<ul class="menu-list navbar-nav">

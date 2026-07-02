@@ -382,7 +382,8 @@ section#intro .swiper-button-next {
 }
 
 /* ── Hamburger button – sembunyikan di desktop ── */
-.navbar-toggler {
+.navbar-toggler,
+#menu-toggle {
     background: none;
     border: none;
     cursor: pointer;
@@ -390,25 +391,32 @@ section#intro .swiper-button-next {
     display: none;
     flex-direction: column;
     gap: 5px;
-    margin-left: auto;
+    z-index: 10000;
 }
 .toggler-bar {
     display: block;
-    width: 24px;
+    width: 26px;
     height: 2px;
     background: #3a3a3a;
     border-radius: 2px;
     transition: all 0.3s;
 }
 /* Animasi hamburger → X saat active */
-.navbar-toggler.active .toggler-bar:nth-child(1) {
+#menu-toggle.active .toggler-bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
-.navbar-toggler.active .toggler-bar:nth-child(2) {
+#menu-toggle.active .toggler-bar:nth-child(2) {
     opacity: 0;
 }
-.navbar-toggler.active .toggler-bar:nth-child(3) {
+#menu-toggle.active .toggler-bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+    #menu-toggle {
+        display: flex !important;
+        margin-left: auto;
+    }
 }
 /* Animasi hamburger → X saat active */
 .navbar-toggler.active .toggler-bar:nth-child(1) {
