@@ -27,7 +27,7 @@
                     <ul style="padding:0;">
                         <li style="margin-bottom:16px;">
                             <strong>Alamat</strong><br>
-                            <span style="color:#666;">[Alamat lengkap D'Bloom Florist]</span>
+                            <span style="color:#666;">Paling pojok (diatas hoop kost), Jl. Kolonel Achmad Syam Ruko No.40 Lt 2, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</span>
                         </li>
                         <li style="margin-bottom:16px;">
                             <strong>WhatsApp</strong><br>

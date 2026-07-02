@@ -11,12 +11,6 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				<div class="footer-menu">
 					<img src="<?= esc($assetPath, 'attr') ?>/images/logo.png" alt="D'Bloom Florist" class="footer-logo">
 					<p>Buket aesthetic artificial, fresh flowers & dried flowers untuk setiap momen spesial. Berdiri sejak 2022 dengan cinta.</p>
-					<div class="form-content">
-						<form>
-							<input type="text" name="wa" placeholder="Nomor WhatsApp kamu">
-							<button class="btn btn-black">Hubungi</button>
-						</form>
-					</div>
 				</div>
 			</div>
 
@@ -50,7 +44,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				<div class="footer-menu">
 					<h5>Hubungi Kami</h5>
 					<ul class="menu-list">
-						<li class="menu-item">[Alamat D'Bloom Florist]</li>
+						<li class="menu-item">Paling pojok (diatas hoop kost), Jl. Kolonel Achmad Syam Ruko No.40 Lt 2, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</li>
 						<li class="menu-item">
 							<a href="https://wa.me/<?= esc($waNumber) ?>" target="_blank" class="mail-id">
 								WhatsApp: +<?= esc($waNumber) ?>
