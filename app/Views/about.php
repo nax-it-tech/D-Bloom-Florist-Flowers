@@ -12,7 +12,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="about" class="scrollspy-section first-section margin-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 video-content">
+			<div class="col-12 col-md-6 video-content">
 				<div class="video-player">
 					<a id="video-item" href="javascript:void(0)">
 						<i class="icon icon-youtube-player"></i>
@@ -22,7 +22,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				</div>
 			</div>
 
-			<div class="col-md-5 description">
+			<div class="col-12 col-md-5 description mt-4 mt-md-0">
 				<div class="section-header">
 					<h2 class="section-title">Perjalanan Kami</h2>
 				</div>
@@ -43,7 +43,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="why-us" class="scrollspy-section bg-accent padding-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 left-column">
+			<div class="col-12 col-md-6 left-column">
 				<div class="section-header">
 					<h2 class="section-title">Nilai-nilai D'Bloom</h2>
 				</div>
@@ -74,7 +74,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-6 right-column">
+			<div class="col-12 col-md-6 right-column mt-4 mt-md-0">
 				<figure class="single-image-holder">
 					<img src="<?= esc($imgPath) ?>/Artificial%20Bouquet/Flower_bouquet___design___Banner_Editing-removebg-preview.png"
 					     alt="D'Bloom Bouquet">
@@ -91,7 +91,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 			<h2 class="section-title">Tim D'Bloom</h2>
 		</div>
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">
@@ -104,7 +104,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">
@@ -125,7 +125,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="services">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="services-item">
 					<i class="icon icon-shopping-cart"></i>
 					<div class="services-content">
@@ -134,7 +134,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="services-item">
 					<i class="icon icon-secure"></i>
 					<div class="services-content">
@@ -143,7 +143,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="services-item">
 					<i class="icon icon-guarantee"></i>
 					<div class="services-content">
@@ -152,7 +152,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="services-item">
 					<i class="icon icon-price-tag"></i>
 					<div class="services-content">

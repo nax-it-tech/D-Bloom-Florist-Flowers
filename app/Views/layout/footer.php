@@ -7,7 +7,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-3 footer-intro">
+			<div class="col-12 col-md-3 footer-intro">
 				<div class="footer-menu">
 					<img src="<?= esc($assetPath, 'attr') ?>/images/logo.png" alt="D'Bloom Florist" class="footer-logo">
 					<p>Buket aesthetic artificial, fresh flowers & dried flowers untuk setiap momen spesial. Berdiri sejak 2022 dengan cinta.</p>
@@ -20,7 +20,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				</div>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-6 col-md-2">
 				<div class="footer-menu">
 					<h5>Menu</h5>
 					<ul class="menu-list">
@@ -33,7 +33,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				</div>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-6 col-md-2">
 				<div class="footer-menu">
 					<h5>Kategori</h5>
 					<ul class="menu-list">
@@ -46,7 +46,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 				</div>
 			</div>
 
-			<div class="col-md-3">
+			<div class="col-12 col-md-3">
 				<div class="footer-menu">
 					<h5>Hubungi Kami</h5>
 					<ul class="menu-list">

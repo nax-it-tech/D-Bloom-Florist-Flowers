@@ -29,13 +29,13 @@ $waNumber  = $waNumber  ?? '6288218247268';
 		</div>
 		<div class="row">
 
-			<div class="col-md-6">
+			<div class="col-12 col-md-6 d-none d-md-block">
 				<figure class="testimonial-image">
 					<img src="<?= esc($assetPath, 'attr') ?>/images/review-image.png" alt="review">
 				</figure>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-12 col-md-6">
 				<div class="swiper testimonial-slider">
 					<div class="swiper-wrapper">
 
@@ -115,7 +115,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="why-us" class="scrollspy-section bg-accent padding-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 left-column">
+			<div class="col-12 col-md-6 left-column">
 				<div class="section-header">
 					<h2 class="section-title">Sudah 500+ Customer Puas!</h2>
 				</div>
@@ -129,7 +129,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 right-column">
+			<div class="col-12 col-md-6 right-column mt-4 mt-md-0">
 				<figure class="single-image-holder">
 					<img src="<?= esc($assetPath, 'attr') ?>/images/review-image.png" alt="Happy Customers">
 				</figure>

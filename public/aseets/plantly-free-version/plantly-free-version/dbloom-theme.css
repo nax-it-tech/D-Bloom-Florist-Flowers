@@ -298,3 +298,303 @@ a.add-to-cart:hover {
 .banner-title {
     color: #3a3a3a;
 }
+
+
+
+/* ============================================================
+   RESPONSIVE MOBILE – D'Bloom Florist
+   Breakpoint utama: 768px (md) dan 576px (sm)
+   ============================================================ */
+
+/* ── Filter / association bar – wrap tombol di mobile ── */
+.association-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* ── Swiper nav button container ── */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+@media (max-width: 991px) {
+    /* Header wrap padding lebih kecil */
+    #header-wrap {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* ── Header & Navbar ── */
+    #header-wrap {
+        padding: 0 16px;
+        min-height: 64px;
+    }
+    .main-logo {
+        height: 64px !important;
+    }
+    nav#navbar {
+        height: auto;
+    }
+    body {
+        padding-top: 64px;
+    }
+    section#intro.intro-swiper {
+        margin-top: -64px;
+    }
+
+    /* ── Hero Swiper ── */
+    .intro-swiper .swiper-slide {
+        flex-direction: column !important;
+        padding: 80px 20px 40px !important;
+        min-height: 420px;
+        text-align: center;
+    }
+    .intro-swiper .banner-content {
+        order: 2;
+        padding: 20px 0 0 !important;
+    }
+    .intro-swiper .banner-title {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+    .intro-swiper .btn-wrap {
+        justify-content: center;
+    }
+    .intro-swiper img {
+        order: 1;
+        max-height: 220px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    /* ── Section padding ── */
+    .padding-xlarge {
+        padding: 40px 0 !important;
+    }
+    .margin-xlarge {
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+    }
+    .padding-large {
+        padding: 24px 0 !important;
+    }
+
+    /* ── Section title ── */
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    /* ── Product grid: 2 kolom di mobile ── */
+    .herb-items .col-md-3,
+    .herb-items .col-md-4 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        padding: 6px !important;
+    }
+
+    /* ── Blog grid: 1 kolom di mobile ── */
+    .post-grid .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 24px;
+    }
+
+    /* ── Collection swiper: 1 slide di mobile ── */
+    .collection-swiper .swiper-slide.col-md-4 {
+        width: 85% !important;
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+    }
+
+    /* ── 2-kolom section (about, testimonial, why-us) ── */
+    .col-md-6.left-column,
+    .col-md-6.right-column,
+    .col-md-6.video-content,
+    .col-md-5.description {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    /* Gambar di kanan tampil di bawah teks di mobile */
+    .col-md-6.right-column,
+    .col-md-6.video-content + .col-md-5 {
+        margin-top: 24px;
+    }
+    /* Testimonial: gambar di atas, slider di bawah */
+    #testimonial .col-md-6:first-child {
+        display: none; /* sembunyikan gambar besar di mobile untuk hemat ruang */
+    }
+    .testimonial-image img {
+        max-height: 220px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* ── Maps height di mobile ── */
+    div[style*="height:480px"],
+    div[style*="height: 480px"] {
+        height: 250px !important;
+    }
+
+    /* ── Services section: 2 kolom ── */
+    #services .col-md-3 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 16px;
+    }
+    .services-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 8px !important;
+    }
+    .services-item i {
+        margin-bottom: 8px;
+    }
+
+    /* ── Filter bar tombol lebih kecil ── */
+    .association-content .btn {
+        font-size: 0.78rem !important;
+        padding: 6px 14px !important;
+    }
+
+    /* ── Custom order form: full width ── */
+    #why-us.first-section .col-md-6.left-column,
+    #why-us.first-section .col-md-6.right-column {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    /* Sembunyikan gambar contoh di mobile supaya form lebih fokus */
+    #why-us.first-section .col-md-6.right-column {
+        display: none;
+    }
+    /* Form row 2 kolom jadi 1 kolom */
+    #customOrderForm .row .col {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    #customOrderForm {
+        padding: 20px !important;
+    }
+
+    /* ── Contact form & info: stack ── */
+    #about .col-md-6.video-content,
+    #about .col-md-5.description {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    #about .col-md-5.description {
+        margin-top: 32px;
+    }
+    /* Contact FAQ: 2 kolom stack jadi 1 ── */
+    #why-us .col-md-6.left-column,
+    #why-us .col-md-6.right-column {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    #why-us .col-md-6.right-column .expertize {
+        padding-top: 0 !important;
+    }
+
+    /* ── Footer: stack kolom ── */
+    #footer .col-md-3,
+    #footer .col-md-2 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 24px;
+    }
+    #footer-bottom .col-md-12 .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+    #footer-bottom .social-links ul {
+        justify-content: center;
+    }
+
+    /* ── Blog post 2-kolom ── */
+    #about .col-md-6.video-content img.video-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* ── About team: 2 kolom ── */
+    #team .col-md-3 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    /* ── Scroll up button posisi ── */
+    #scroll-up {
+        bottom: 20px !important;
+        right: 16px !important;
+    }
+
+    /* ── Stats bar di testimonials ── */
+    #association .association-content span {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    /* ── Single image holder ── */
+    .single-image-holder img {
+        max-height: 260px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* ── Btn wrap center di mobile ── */
+    .btn-wrap {
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    /* ── Container padding ── */
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Sangat kecil: product grid 1 kolom */
+    .herb-items .col-md-3,
+    .herb-items .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .intro-swiper .banner-title {
+        font-size: 1.3rem !important;
+    }
+}
+
+
+/* ── Maps container responsive ── */
+.maps-container {
+    height: 480px;
+}
+@media (max-width: 767px) {
+    .maps-container {
+        height: 220px;
+    }
+}

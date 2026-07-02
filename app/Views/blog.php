@@ -40,7 +40,7 @@ $posts = [
 				<div class="post-grid">
 					<div class="row">
 						<?php foreach ($posts as $post): ?>
-						<div class="col-md-4">
+						<div class="col-12 col-md-4">
 							<article class="post-item">
 								<figure>
 									<a href="<?= base_url('blog/' . esc($post['slug'], 'url')) ?>" class="image-hvr-effect">

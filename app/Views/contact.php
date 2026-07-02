@@ -5,7 +5,7 @@
 <button id="scroll-up"><i class="icon icon-arrow-up"></i></button>
 
 <!-- Maps Full Lebar seperti Hero -->
-<div style="width:100%; height:480px; position:relative; overflow:hidden; margin-top:0;">
+<div class="maps-container" style="width:100%; position:relative; overflow:hidden; margin-top:0;">
     <iframe
         src="https://maps.google.com/maps?q=https://maps.app.goo.gl/nghsdKhgZVeHHX969&output=embed"
         width="100%" height="100%"
@@ -13,15 +13,13 @@
         allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-    <!-- Overlay link buka di Google Maps -->
-   
 </div>
 
 <!-- Info Kontak -->
 <section id="about" class="scrollspy-section margin-xlarge">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 video-content">
+            <div class="col-12 col-md-6 video-content">
                 <div class="section-header">
                     <h2 class="section-title">Temukan Kami</h2>
                 </div>
@@ -61,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="col-md-5 description">
+            <div class="col-12 col-md-5 description mt-4 mt-md-0">
                 <div class="section-header">
                     <h2 class="section-title">Kirim Pesan</h2>
                 </div>
@@ -106,7 +104,7 @@
 <section id="why-us" class="scrollspy-section bg-accent padding-xlarge">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 left-column">
+            <div class="col-12 col-md-6 left-column">
                 <div class="section-header">
                     <h2 class="section-title">FAQ</h2>
                 </div>
@@ -136,8 +134,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 right-column">
-                <div class="expertize" style="padding-top:60px;">
+            <div class="col-12 col-md-6 right-column mt-4 mt-md-0">
+                <div class="expertize" style="padding-top:0;">
                     <ul>
                         <li>
                             <span class="list-number">4.</span>
@@ -171,7 +169,7 @@
 <section id="services">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-shopping-cart"></i>
                     <div class="services-content">
@@ -180,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-secure"></i>
                     <div class="services-content">
@@ -189,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-guarantee"></i>
                     <div class="services-content">
@@ -198,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-price-tag"></i>
                     <div class="services-content">

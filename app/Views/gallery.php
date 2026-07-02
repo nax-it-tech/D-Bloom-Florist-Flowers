@@ -43,7 +43,7 @@ $images = [
 		</div>
 		<div class="row">
 			<?php foreach ($images as $img): ?>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">

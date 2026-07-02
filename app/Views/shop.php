@@ -49,7 +49,7 @@ $dried = [
 		</div>
 		<div class="row">
 			<?php foreach ($artificial as $p): ?>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">
@@ -93,7 +93,7 @@ $dried = [
 		</div>
 		<div class="row">
 			<?php foreach ($fresh as $p): ?>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">
@@ -131,7 +131,7 @@ $dried = [
 		</div>
 		<div class="row">
 			<?php foreach ($dried as $p): ?>
-			<div class="col-md-3">
+			<div class="col-6 col-md-3">
 				<div class="product-list">
 					<div class="product-item">
 						<div class="image-holder">
@@ -165,7 +165,7 @@ $dried = [
 <section id="snack" class="scrollspy-section bg-accent padding-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 left-column">
+			<div class="col-12 col-md-6 left-column">
 				<div class="section-header">
 					<h2 class="section-title">Snack &amp; Money Bouquet</h2>
 				</div>
@@ -190,7 +190,7 @@ $dried = [
 					</a>
 				</div>
 			</div>
-			<div class="col-md-6 right-column">
+			<div class="col-12 col-md-6 right-column mt-4 mt-md-0">
 				<figure class="single-image-holder">
 					<img src="<?= esc($imgPath) ?>/Dried%20%26%20Preserved/FLORIST_CHOICE_DRIED_FLOWER_BOUQUET-removebg-preview.png"
 					     alt="Snack Bouquet">

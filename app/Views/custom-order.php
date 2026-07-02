@@ -14,7 +14,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
     <div class="row">
 
       <!-- Form -->
-      <div class="col-md-6 left-column">
+      <div class="col-12 col-md-6 left-column">
         <div class="section-header">
           <h2 class="section-title">Custom Order</h2>
         </div>
@@ -80,7 +80,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
       </div>
 
       <!-- Gambar -->
-      <div class="col-md-6 right-column" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <div class="col-12 col-md-6 right-column d-none d-md-flex" style="flex-direction:column; align-items:center; justify-content:center;">
         <div class="section-header" style="text-align:center; width:100%;">
           <h2 class="section-title">Contoh Desain</h2>
         </div>

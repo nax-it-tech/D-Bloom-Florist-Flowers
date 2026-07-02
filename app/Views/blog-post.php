@@ -10,14 +10,14 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="about" class="scrollspy-section first-section margin-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 video-content">
+			<div class="col-12 col-md-6 video-content">
 				<figure>
 					<img src="<?= esc($assetPath, 'attr') ?>/images/blog-post.jpg"
 					     alt="<?= esc($post['judul']) ?>" class="video-image" style="width:100%;border-radius:8px;">
 				</figure>
 			</div>
 
-			<div class="col-md-5 description">
+			<div class="col-12 col-md-5 description mt-4 mt-md-0">
 				<div class="section-header">
 					<h2 class="section-title"><?= esc($post['judul']) ?></h2>
 				</div>
@@ -37,7 +37,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 <section id="why-us" class="scrollspy-section bg-accent padding-xlarge">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 left-column">
+			<div class="col-12 col-md-6 left-column">
 				<div class="section-header">
 					<h2 class="section-title">Siap Pesan Buket Impianmu?</h2>
 				</div>
@@ -51,7 +51,7 @@ $waNumber  = $waNumber  ?? '6288218247268';
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 right-column">
+			<div class="col-12 col-md-6 right-column mt-4 mt-md-0">
 				<figure class="single-image-holder">
 					<img src="<?= esc($assetPath, 'attr') ?>/images/plant-item15.png" alt="D'Bloom Florist">
 				</figure>

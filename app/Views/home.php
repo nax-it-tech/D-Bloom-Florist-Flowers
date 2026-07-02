@@ -62,7 +62,7 @@ $waNumber = $waNumber ?? '6288218247268';
 
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -83,7 +83,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -104,7 +104,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -125,7 +125,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -146,7 +146,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="btn-wrap align-center margin-small">
+            <div class="col-12 btn-wrap align-center margin-small">
                 <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
                     Lihat Semua <i class="icon icon-arrow-right"></i>
                 </a>
@@ -242,7 +242,7 @@ $waNumber = $waNumber ?? '6288218247268';
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6 left-column">
+            <div class="col-12 col-md-6 left-column">
                 <div class="section-header">
                     <h2 class="section-title">Kenapa Pilih D'Bloom?</h2>
                 </div>
@@ -274,7 +274,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-6 right-column">
+            <div class="col-12 col-md-6 right-column">
                 <figure class="single-image-holder">
                     <img src="<?= $imgPath ?>/Artificial%20Bouquet/Beautiful_Bouquet____-removebg-preview.png" alt="D'Bloom Bouquet">
                 </figure>
@@ -295,7 +295,7 @@ $waNumber = $waNumber ?? '6288218247268';
 
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -316,7 +316,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -337,7 +337,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -358,7 +358,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="product-list">
                     <div class="product-item">
                         <div class="image-holder">
@@ -379,7 +379,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="btn-wrap align-center margin-small">
+            <div class="col-12 btn-wrap align-center margin-small">
                 <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
                     Lihat Semua <i class="icon icon-arrow-right"></i>
                 </a>
@@ -469,13 +469,13 @@ $waNumber = $waNumber ?? '6288218247268';
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 d-none d-md-block">
                 <figure class="testimonial-image">
                     <img src="<?= $imgPath ?>/Artificial%20Bouquet/download__2_-removebg-preview.png" alt="D'Bloom Bouquet">
                 </figure>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-md-6">
                 <div class="section-header">
                     <h2 class="section-title">Kata Pelanggan Kami</h2>
                 </div>
@@ -536,7 +536,7 @@ $waNumber = $waNumber ?? '6288218247268';
     <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-shopping-cart"></i>
                     <div class="services-content">
@@ -546,7 +546,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-secure"></i>
                     <div class="services-content">
@@ -556,7 +556,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-guarantee"></i>
                     <div class="services-content">
@@ -566,7 +566,7 @@ $waNumber = $waNumber ?? '6288218247268';
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="services-item">
                     <i class="icon icon-price-tag"></i>
                     <div class="services-content">
