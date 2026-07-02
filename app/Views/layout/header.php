@@ -52,7 +52,7 @@ function isActive(string $path, string $current): string {
 
 		<nav id="navbar">
 			<!-- Hamburger toggle untuk mobile -->
-			<button class="navbar-toggler d-block d-lg-none" type="button" id="menu-toggle" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" id="menu-toggle" aria-label="Toggle navigation">
 				<span class="toggler-bar"></span>
 				<span class="toggler-bar"></span>
 				<span class="toggler-bar"></span>

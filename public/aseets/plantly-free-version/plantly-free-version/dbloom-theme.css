@@ -381,7 +381,7 @@ section#intro .swiper-button-next {
     transform: translateY(-50%) !important;
 }
 
-/* ── Hamburger button ── */
+/* ── Hamburger button – sembunyikan di desktop ── */
 .navbar-toggler {
     background: none;
     border: none;
@@ -447,7 +447,7 @@ section#intro .swiper-button-next {
 
     /* Menu list tersembunyi di mobile, muncul saat open */
     .main-menu#navigation {
-        display: none;
+        display: none !important;
         position: fixed;
         top: 64px;
         left: 0;
