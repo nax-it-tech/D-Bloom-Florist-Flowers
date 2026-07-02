@@ -117,46 +117,69 @@ $waNumber  = $waNumber  ?? '6288218247268';
 	});
 
 	// Hamburger menu toggle
-	var menuToggle = document.getElementById("menu-toggle");
-	var navigation = document.getElementById("navigation");
-	if (menuToggle && navigation) {
+	(function() {
+		var menuToggle = document.getElementById("menu-toggle");
+		var menuList   = document.querySelector("nav#navbar ul.menu-list");
+
+		if (!menuToggle || !menuList) return;
+
 		var menuOpen = false;
 
-		// Set initial state untuk mobile
-		function setMenuState() {
-			if (window.innerWidth < 992) {
-				if (!menuOpen) {
-					navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
-				}
-			} else {
-				navigation.style.cssText = '';
-				menuOpen = false;
-				menuToggle.classList.remove("active");
-			}
+		var openStyle = [
+			"display:flex",
+			"flex-direction:column",
+			"position:fixed",
+			"top:64px",
+			"left:0",
+			"width:100%",
+			"height:calc(100vh - 64px)",
+			"background:rgba(248,241,241,0.98)",
+			"z-index:9999",
+			"overflow-y:auto",
+			"padding:20px 24px",
+			"margin:0",
+			"list-style:none",
+			"backdrop-filter:blur(8px)"
+		].join(";");
+
+		function closeMenu() {
+			menuOpen = false;
+			menuList.removeAttribute("style");
+			menuToggle.classList.remove("active");
 		}
 
-		setMenuState();
-		window.addEventListener('resize', setMenuState);
+		function openMenu() {
+			menuOpen = true;
+			menuList.setAttribute("style", openStyle);
+			menuToggle.classList.add("active");
+		}
 
-		menuToggle.addEventListener("click", function() {
-			menuOpen = !menuOpen;
-			if (menuOpen) {
-				navigation.style.cssText = 'display:block!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
-			} else {
-				navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
-			}
-			this.classList.toggle("active");
-		});
-
-		// Tutup menu saat link diklik
-		navigation.querySelectorAll("a:not(.dropdown-toggle)").forEach(function(link) {
-			link.addEventListener("click", function() {
-				menuOpen = false;
-				navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
+		// Reset saat resize ke desktop
+		window.addEventListener("resize", function() {
+			if (window.innerWidth >= 992) {
+				menuList.removeAttribute("style");
 				menuToggle.classList.remove("active");
-			});
+				menuOpen = false;
+			}
 		});
-	}
+
+		menuToggle.addEventListener("click", function(e) {
+			e.stopPropagation();
+			menuOpen ? closeMenu() : openMenu();
+		});
+
+		// Tutup saat klik link (bukan dropdown toggle)
+		menuList.querySelectorAll("a:not([data-bs-toggle])").forEach(function(link) {
+			link.addEventListener("click", closeMenu);
+		});
+
+		// Tutup saat klik di luar menu
+		document.addEventListener("click", function(e) {
+			if (menuOpen && !menuList.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
+				closeMenu();
+			}
+		});
+	})();
 </script>
 
 </body>

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * D'Bloom Florist – Custom Theme Override
  * Palette: #FFC1CC (Pink Blush), #A8B5A2 (Sage Green), #F8F1F1 (Cream)
  */
@@ -490,7 +490,6 @@ section#intro .swiper-button-next {
     .right-element.icon-element {
         display: none !important;
     }
-
     body {
         padding-top: 64px;
     }
