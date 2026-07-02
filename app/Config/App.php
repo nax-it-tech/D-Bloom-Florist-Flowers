@@ -22,13 +22,12 @@ class App extends BaseConfig
     {
         parent::__construct();
         // Pakai APP_URL dari environment variable Railway jika tersedia
-        if (! empty($_ENV['APP_URL'])) {
-            $url = $_ENV['APP_URL'];
-            // Pastikan ada https:// dan trailing slash
-            if (! str_starts_with($url, 'http')) {
-                $url = 'https://' . $url;
+        $appUrl = getenv('APP_URL') ?: ($_ENV['APP_URL'] ?? '') ?: ($_SERVER['APP_URL'] ?? '');
+        if (! empty($appUrl)) {
+            if (! str_starts_with($appUrl, 'http')) {
+                $appUrl = 'https://' . $appUrl;
             }
-            $this->baseURL = rtrim($url, '/') . '/';
+            $this->baseURL = rtrim($appUrl, '/') . '/';
         }
     }
 
