@@ -100,77 +100,79 @@ $waNumber  = $waNumber  ?? '6288218247268';
 		<div class="section-header">
 			<h2 class="section-title">Inspirasi Custom Order</h2>
 		</div>
-		<div class="row">
-			<div class="swiper collection-swiper">
-				<div class="swiper-wrapper">
 
-					<div class="col-md-4 swiper-slide">
-						<div class="product-item">
-							<div class="image-holder">
-								<img src="<?= esc($imgPath) ?>/Artificial%20Bouquet/download__1_-removebg-preview.png" alt="Custom Wisuda">
-								<div class="item-info">
-									<p>Bouquet custom tema wisuda dengan warna pastel pink dan wrapping putih elegan. Bisa ditambah nama dan pesan spesial.</p>
-									<div class="btn-wrap margin-small">
-										<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20tema%20wisuda!"
-										   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
-											Pesan Ini <i class="icon icon-arrow-right"></i>
-										</a>
-									</div>
+		<div class="swiper collection-swiper">
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide">
+					<div class="product-item">
+						<div class="image-holder">
+							<img src="<?= esc($imgPath) ?>/Artificial%20Bouquet/download__1_-removebg-preview.png" alt="Custom Wisuda">
+							<div class="item-info">
+								<p>Bouquet custom tema wisuda dengan warna pastel pink dan wrapping putih elegan. Bisa ditambah nama dan pesan spesial.</p>
+								<div class="btn-wrap margin-small">
+									<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20tema%20wisuda!"
+									   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
+										Pesan Ini <i class="icon icon-arrow-right"></i>
+									</a>
 								</div>
 							</div>
-							<div class="product-content">
-								<h3 class="product-title"><a href="#">Tema Wisuda Pink</a></h3>
-							</div>
+						</div>
+						<div class="product-content">
+							<h3 class="product-title"><a href="#">Tema Wisuda Pink</a></h3>
 						</div>
 					</div>
-
-					<div class="col-md-4 swiper-slide">
-						<div class="product-item">
-							<div class="image-holder">
-								<img src="<?= esc($imgPath) ?>/Artificial%20Bouquet/download__2_-removebg-preview.png" alt="Custom Anniversary">
-								<div class="item-info">
-									<p>Bouquet romantic untuk anniversary dengan warna merah dan putih. Bisa ditambah chocolat atau uang sebagai isi.</p>
-									<div class="btn-wrap margin-small">
-										<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20tema%20anniversary!"
-										   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
-											Pesan Ini <i class="icon icon-arrow-right"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="product-content">
-								<h3 class="product-title"><a href="#">Tema Anniversary Elegan</a></h3>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 swiper-slide">
-						<div class="product-item">
-							<div class="image-holder">
-								<img src="<?= esc($imgPath) ?>/Dried%20%26%20Preserved/FLORIST_CHOICE_DRIED_FLOWER_BOUQUET-removebg-preview.png" alt="Custom Dried">
-								<div class="item-info">
-									<p>Bouquet dried flowers yang awet abadi. Cocok untuk kenang-kenangan, dekorasi rumah, atau hadiah unik yang berkesan.</p>
-									<div class="btn-wrap margin-small">
-										<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20dried%20flowers!"
-										   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
-											Pesan Ini <i class="icon icon-arrow-right"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="product-content">
-								<h3 class="product-title"><a href="#">Dried Flowers Abadi</a></h3>
-							</div>
-						</div>
-					</div>
-
 				</div>
-			</div>
-			<div class="button-container">
-				<div class="swiper-button-prev icon icon-arrow-left"></div>
-				<div class="swiper-button-next icon icon-arrow-right"></div>
+
+				<div class="swiper-slide">
+					<div class="product-item">
+						<div class="image-holder">
+							<img src="<?= esc($imgPath) ?>/Artificial%20Bouquet/download__2_-removebg-preview.png" alt="Custom Anniversary">
+							<div class="item-info">
+								<p>Bouquet romantic untuk anniversary dengan warna merah dan putih. Bisa ditambah chocolat atau uang sebagai isi.</p>
+								<div class="btn-wrap margin-small">
+									<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20tema%20anniversary!"
+									   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
+										Pesan Ini <i class="icon icon-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-content">
+							<h3 class="product-title"><a href="#">Tema Anniversary Elegan</a></h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="product-item">
+						<div class="image-holder">
+							<img src="<?= esc($imgPath) ?>/Dried%20%26%20Preserved/FLORIST_CHOICE_DRIED_FLOWER_BOUQUET-removebg-preview.png" alt="Custom Dried">
+							<div class="item-info">
+								<p>Bouquet dried flowers yang awet abadi. Cocok untuk kenang-kenangan, dekorasi rumah, atau hadiah unik yang berkesan.</p>
+								<div class="btn-wrap margin-small">
+									<a href="https://wa.me/<?= esc($waNumber) ?>?text=Halo%2C%20saya%20mau%20custom%20dried%20flowers!"
+									   target="_blank" class="btn btn-black btn-xlarge btn-rounded">
+										Pesan Ini <i class="icon icon-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-content">
+							<h3 class="product-title"><a href="#">Dried Flowers Abadi</a></h3>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
+
+		<!-- Arrow di luar swiper agar tidak nabrak form -->
+		<div class="button-container">
+			<div class="swiper-button-prev icon icon-arrow-left collection-prev"></div>
+			<div class="swiper-button-next icon icon-arrow-right collection-next"></div>
+		</div>
+
 	</div>
 </section>
 

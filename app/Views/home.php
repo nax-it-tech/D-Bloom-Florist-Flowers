@@ -164,75 +164,75 @@ $waNumber = $waNumber ?? '6288218247268';
             <h2 class="section-title">Koleksi Pilihan</h2>
         </div>
 
-        <div class="row">
-            <div class="swiper collection-swiper">
-                <div class="swiper-wrapper">
+        <div class="swiper collection-swiper">
+            <div class="swiper-wrapper">
 
-                    <div class="col-md-4 swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder">
-                                <img src="<?= $imgPath ?>/Artificial%20Bouquet/download__1_-removebg-preview.png" alt="Artificial Bouquet">
-                                <div class="item-info">
-                                    <p>Buket artificial pilihan terbaik — tidak layu, tahan lama, dan tampil cantik untuk dekorasi maupun hadiah di setiap momen spesial.</p>
-                                    <div class="btn-wrap margin-small">
-                                        <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
-                                            Lihat Koleksi <i class="icon icon-arrow-right"></i>
-                                        </a>
-                                    </div>
+                <div class="swiper-slide">
+                    <div class="product-item">
+                        <div class="image-holder">
+                            <img src="<?= $imgPath ?>/Artificial%20Bouquet/download__1_-removebg-preview.png" alt="Artificial Bouquet">
+                            <div class="item-info">
+                                <p>Buket artificial pilihan terbaik — tidak layu, tahan lama, dan tampil cantik untuk dekorasi maupun hadiah di setiap momen spesial.</p>
+                                <div class="btn-wrap margin-small">
+                                    <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
+                                        Lihat Koleksi <i class="icon icon-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="product-content">
-                                <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Artificial Bouquet</a></h3>
-                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Artificial Bouquet</a></h3>
                         </div>
                     </div>
-
-                    <div class="col-md-4 swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder">
-                                <img src="<?= $imgPath ?>/Fresh%20Flowers/download__1_-removebg-preview.png" alt="Fresh Flowers">
-                                <div class="item-info">
-                                    <p>Bunga segar pilihan langsung dari kebun terbaik — harum alami, warna cerah, sempurna untuk ungkapan rasa di hari istimewa.</p>
-                                    <div class="btn-wrap margin-small">
-                                        <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
-                                            Lihat Koleksi <i class="icon icon-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Fresh Flowers</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder">
-                                <img src="<?= $imgPath ?>/Dried%20%26%20Preserved/FLORIST_CHOICE_DRIED_FLOWER_BOUQUET-removebg-preview.png" alt="Dried & Preserved">
-                                <div class="item-info">
-                                    <p>Bunga kering dan preserved yang diproses dengan teknik khusus — tampilan elegan, awet berbulan-bulan, dan cocok sebagai dekorasi rumah minimalis.</p>
-                                    <div class="btn-wrap margin-small">
-                                        <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
-                                            Lihat Koleksi <i class="icon icon-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Dried &amp; Preserved</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-            <div class="button-container">
-                <div class="swiper-button-prev icon icon-arrow-left"></div>
-                <div class="swiper-button-next icon icon-arrow-right"></div>
+                <div class="swiper-slide">
+                    <div class="product-item">
+                        <div class="image-holder">
+                            <img src="<?= $imgPath ?>/Fresh%20Flowers/download__1_-removebg-preview.png" alt="Fresh Flowers">
+                            <div class="item-info">
+                                <p>Bunga segar pilihan langsung dari kebun terbaik — harum alami, warna cerah, sempurna untuk ungkapan rasa di hari istimewa.</p>
+                                <div class="btn-wrap margin-small">
+                                    <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
+                                        Lihat Koleksi <i class="icon icon-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Fresh Flowers</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product-item">
+                        <div class="image-holder">
+                            <img src="<?= $imgPath ?>/Dried%20%26%20Preserved/FLORIST_CHOICE_DRIED_FLOWER_BOUQUET-removebg-preview.png" alt="Dried & Preserved">
+                            <div class="item-info">
+                                <p>Bunga kering dan preserved yang diproses dengan teknik khusus — tampilan elegan, awet berbulan-bulan, dan cocok sebagai dekorasi rumah minimalis.</p>
+                                <div class="btn-wrap margin-small">
+                                    <a href="<?= base_url('katalog') ?>" class="btn btn-black btn-xlarge btn-rounded">
+                                        Lihat Koleksi <i class="icon icon-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="<?= base_url('katalog') ?>">Dried &amp; Preserved</a></h3>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <!-- Arrow di luar swiper agar tidak nabrak konten -->
+        <div class="button-container">
+            <div class="swiper-button-prev icon icon-arrow-left collection-prev"></div>
+            <div class="swiper-button-next icon icon-arrow-right collection-next"></div>
+        </div>
+
     </div>
 </section>
 

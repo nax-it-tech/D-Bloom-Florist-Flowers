@@ -115,6 +115,24 @@ $waNumber  = $waNumber  ?? '6288218247268';
 			header.classList.remove("scrolled");
 		}
 	});
+
+	// Hamburger menu toggle
+	var menuToggle = document.getElementById("menu-toggle");
+	var navigation = document.getElementById("navigation");
+	if (menuToggle && navigation) {
+		menuToggle.addEventListener("click", function() {
+			navigation.classList.toggle("open");
+			// Animasi hamburger → X
+			this.classList.toggle("active");
+		});
+		// Tutup menu saat link diklik
+		navigation.querySelectorAll("a:not(.dropdown-toggle)").forEach(function(link) {
+			link.addEventListener("click", function() {
+				navigation.classList.remove("open");
+				menuToggle.classList.remove("active");
+			});
+		});
+	}
 </script>
 
 </body>

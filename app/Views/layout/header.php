@@ -51,6 +51,13 @@ function isActive(string $path, string $current): string {
 		</div>
 
 		<nav id="navbar">
+			<!-- Hamburger toggle untuk mobile -->
+			<button class="navbar-toggler d-block d-lg-none" type="button" id="menu-toggle" aria-label="Toggle navigation">
+				<span class="toggler-bar"></span>
+				<span class="toggler-bar"></span>
+				<span class="toggler-bar"></span>
+			</button>
+
 			<div class="main-menu" id="navigation">
 				<ul class="menu-list navbar-nav">
 					<li class="menu-item">

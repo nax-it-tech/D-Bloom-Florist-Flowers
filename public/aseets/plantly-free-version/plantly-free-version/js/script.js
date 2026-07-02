@@ -109,17 +109,7 @@
 }); // End of a document
 
 
-// close when click off of container
-$(document).on('click touchstart', function (e){
-
-  var x = document.getElementById("navigation");
-  if (x.className === "main-menu") {
-    x.className += " menu-bar";
-  } else {
-    x.className = "main-menu";
-  }
-
-});
+// (navigation class handler removed – handled by hamburger toggle in footer.js)
 
 
 $(function () {
@@ -177,21 +167,35 @@ tabs.forEach(tab => {
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".collection-next",
+          prevEl: ".collection-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          576: {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         },
       });
 
 
       var swiper = new Swiper(".testimonial-slider", {
           navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".testimonial-slider .swiper-button-next",
+          prevEl: ".testimonial-slider .swiper-button-prev",
           },
         });
 

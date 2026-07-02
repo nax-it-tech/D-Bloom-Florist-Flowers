@@ -301,9 +301,10 @@ a.add-to-cart:hover {
 
 
 
+
 /* ============================================================
    RESPONSIVE MOBILE – D'Bloom Florist
-   Breakpoint utama: 768px (md) dan 576px (sm)
+   Breakpoint utama: 992px (lg), 768px (md), 480px (sm)
    ============================================================ */
 
 /* ── Filter / association bar – wrap tombol di mobile ── */
@@ -314,258 +315,303 @@ a.add-to-cart:hover {
     justify-content: center;
 }
 
-/* ── Swiper nav button container ── */
+/* ── Swiper nav button container (collection, testimonial) ── */
 .button-container {
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+/* Pastikan arrow tidak overlap konten – matikan posisi absolute bawaan */
+#collection .swiper-button-prev,
+#collection .swiper-button-next,
+#custom-order-page .swiper-button-prev,
+#custom-order-page .swiper-button-next {
+    position: static !important;
+    margin: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: #3a3a3a;
+    border-radius: 50%;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#collection .swiper-button-prev::after,
+#collection .swiper-button-next::after {
+    font-size: 14px !important;
 }
 
+/* ── Collection swiper wrapper ── */
+.collection-swiper {
+    overflow: hidden;
+    width: 100%;
+}
+.collection-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+.collection-swiper .swiper-slide {
+    height: auto;
+}
+
+/* ── Hero swiper – desktop ── */
+section#intro .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 520px;
+    padding: 100px 80px 60px;
+    overflow: hidden;
+}
+section#intro .swiper-slide img {
+    max-height: 420px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+section#intro .banner-content {
+    max-width: 45%;
+}
+section#intro .swiper-button-prev,
+section#intro .swiper-button-next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* ── Hamburger button ── */
+.navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+}
+.toggler-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #3a3a3a;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+/* Animasi hamburger → X saat active */
+.navbar-toggler.active .toggler-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.navbar-toggler.active .toggler-bar:nth-child(2) {
+    opacity: 0;
+}
+.navbar-toggler.active .toggler-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+/* Animasi hamburger → X saat active */
+.navbar-toggler.active .toggler-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.navbar-toggler.active .toggler-bar:nth-child(2) {
+    opacity: 0;
+}
+.navbar-toggler.active .toggler-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile menu overlay ── */
 @media (max-width: 991px) {
-    /* Header wrap padding lebih kecil */
-    #header-wrap {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 767px) {
-
-    /* ── Header & Navbar ── */
     #header-wrap {
         padding: 0 16px;
         min-height: 64px;
+        flex-wrap: wrap;
     }
     .main-logo {
         height: 64px !important;
+        flex: 1;
     }
     nav#navbar {
-        height: auto;
+        height: 64px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
+
+    /* Hamburger tampil */
+    .navbar-toggler {
+        display: flex !important;
+    }
+
+    /* Menu list tersembunyi di mobile, muncul saat open */
+    .main-menu#navigation {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: rgba(248, 241, 241, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 9998;
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    .main-menu#navigation.open {
+        display: block !important;
+    }
+    .main-menu#navigation .menu-list {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 0 24px;
+    }
+    .main-menu#navigation .menu-list .menu-item,
+    .main-menu#navigation .menu-list .nav-item {
+        border-bottom: 1px solid #f0e4e7;
+    }
+    .main-menu#navigation .nav-link {
+        padding: 16px 0 !important;
+        font-size: 1.1rem;
+    }
+    .main-menu#navigation .dropdown-menu {
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+        padding: 0 16px !important;
+    }
+    .main-menu#navigation .dropdown-item {
+        padding: 10px 0 !important;
+    }
+
+    /* Icon-icon kanan tetap tampil */
+    .right-element.icon-element {
+        display: none !important;
+    }
+
     body {
         padding-top: 64px;
     }
     section#intro.intro-swiper {
         margin-top: -64px;
     }
+}
 
-    /* ── Hero Swiper ── */
-    .intro-swiper .swiper-slide {
+@media (max-width: 767px) {
+
+    /* ── Hero Swiper mobile ── */
+    section#intro .swiper-slide {
         flex-direction: column !important;
-        padding: 80px 20px 40px !important;
-        min-height: 420px;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        min-height: 380px !important;
+        padding: 80px 24px 32px !important;
         text-align: center;
+        gap: 0;
     }
-    .intro-swiper .banner-content {
-        order: 2;
-        padding: 20px 0 0 !important;
+    section#intro .swiper-slide img {
+        position: absolute;
+        top: 64px;
+        right: 0;
+        max-height: 260px;
+        width: auto;
+        opacity: 0.35;
+        z-index: 0;
+        pointer-events: none;
     }
-    .intro-swiper .banner-title {
+    section#intro .banner-content {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        padding-bottom: 12px;
+    }
+    .banner-title {
         font-size: 1.6rem !important;
         line-height: 1.3 !important;
     }
-    .intro-swiper .btn-wrap {
-        justify-content: center;
+    .btn-wrap {
+        justify-content: center !important;
     }
-    .intro-swiper img {
-        order: 1;
-        max-height: 220px;
-        width: auto;
-        margin: 0 auto;
+    /* Arrow hero sembunyikan di mobile */
+    section#intro .swiper-button-prev,
+    section#intro .swiper-button-next {
+        display: none !important;
     }
 
     /* ── Section padding ── */
-    .padding-xlarge {
-        padding: 40px 0 !important;
-    }
-    .margin-xlarge {
-        margin-top: 40px !important;
-        margin-bottom: 40px !important;
-    }
-    .padding-large {
-        padding: 24px 0 !important;
-    }
+    .padding-xlarge { padding: 40px 0 !important; }
+    .margin-xlarge  { margin-top: 40px !important; margin-bottom: 40px !important; }
+    .padding-large  { padding: 24px 0 !important; }
+    .section-title  { font-size: 1.4rem !important; }
 
-    /* ── Section title ── */
-    .section-title {
-        font-size: 1.5rem !important;
-    }
-
-    /* ── Product grid: 2 kolom di mobile ── */
-    .herb-items .col-md-3,
-    .herb-items .col-md-4 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
+    /* ── Product grid: 2 kolom ── */
+    .col-6.col-md-3,
+    .col-6.col-md-4 {
         padding: 6px !important;
     }
 
-    /* ── Blog grid: 1 kolom di mobile ── */
-    .post-grid .col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        margin-bottom: 24px;
-    }
-
-    /* ── Collection swiper: 1 slide di mobile ── */
+    /* ── Collection swiper: 1 slide tampil ── */
     .collection-swiper .swiper-slide.col-md-4 {
-        width: 85% !important;
-        flex: 0 0 85% !important;
-        max-width: 85% !important;
+        width: 82% !important;
+        flex: 0 0 82% !important;
+        max-width: 82% !important;
+        margin-right: 12px;
+    }
+    /* Arrow collection static di bawah ── */
+    #collection .button-container {
+        margin-top: 16px;
     }
 
-    /* ── 2-kolom section (about, testimonial, why-us) ── */
-    .col-md-6.left-column,
-    .col-md-6.right-column,
-    .col-md-6.video-content,
-    .col-md-5.description {
+    /* ── 2-kolom section stack ── */
+    .col-12.col-md-6,
+    .col-12.col-md-5 {
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    /* Gambar di kanan tampil di bawah teks di mobile */
-    .col-md-6.right-column,
-    .col-md-6.video-content + .col-md-5 {
-        margin-top: 24px;
-    }
-    /* Testimonial: gambar di atas, slider di bawah */
-    #testimonial .col-md-6:first-child {
-        display: none; /* sembunyikan gambar besar di mobile untuk hemat ruang */
-    }
-    .testimonial-image img {
-        max-height: 220px;
-        width: auto;
-        margin: 0 auto;
-        display: block;
+
+    /* ── Testimonial: sembunyikan gambar di mobile ── */
+    #testimonial .d-none.d-md-block {
+        display: none !important;
     }
 
-    /* ── Maps height di mobile ── */
-    div[style*="height:480px"],
-    div[style*="height: 480px"] {
-        height: 250px !important;
-    }
-
-    /* ── Services section: 2 kolom ── */
-    #services .col-md-3 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-        margin-bottom: 16px;
+    /* ── Services: 2 kolom ── */
+    .col-6.col-md-3 {
+        margin-bottom: 12px;
     }
     .services-item {
         flex-direction: column;
         text-align: center;
-        padding: 16px 8px !important;
+        padding: 12px 8px !important;
     }
-    .services-item i {
-        margin-bottom: 8px;
-    }
+    .services-item i { margin-bottom: 6px; }
 
-    /* ── Filter bar tombol lebih kecil ── */
+    /* ── Filter bar ── */
     .association-content .btn {
         font-size: 0.78rem !important;
-        padding: 6px 14px !important;
+        padding: 6px 12px !important;
     }
 
-    /* ── Custom order form: full width ── */
-    #why-us.first-section .col-md-6.left-column,
-    #why-us.first-section .col-md-6.right-column {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    /* Sembunyikan gambar contoh di mobile supaya form lebih fokus */
-    #why-us.first-section .col-md-6.right-column {
-        display: none;
-    }
-    /* Form row 2 kolom jadi 1 kolom */
+    /* ── Contact maps ── */
+    .maps-container { height: 220px !important; }
+
+    /* ── Custom order: gambar tersembunyi di mobile ── */
+    .d-none.d-md-flex { display: none !important; }
+    #customOrderForm  { padding: 20px !important; }
     #customOrderForm .row .col {
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    #customOrderForm {
-        padding: 20px !important;
-    }
-
-    /* ── Contact form & info: stack ── */
-    #about .col-md-6.video-content,
-    #about .col-md-5.description {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    #about .col-md-5.description {
-        margin-top: 32px;
-    }
-    /* Contact FAQ: 2 kolom stack jadi 1 ── */
-    #why-us .col-md-6.left-column,
-    #why-us .col-md-6.right-column {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    #why-us .col-md-6.right-column .expertize {
-        padding-top: 0 !important;
-    }
-
-    /* ── Footer: stack kolom ── */
-    #footer .col-md-3,
-    #footer .col-md-2 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        margin-bottom: 24px;
-    }
-    #footer-bottom .col-md-12 .footer-links {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-    }
-    #footer-bottom .social-links ul {
-        justify-content: center;
-    }
-
-    /* ── Blog post 2-kolom ── */
-    #about .col-md-6.video-content img.video-image {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    /* ── About team: 2 kolom ── */
-    #team .col-md-3 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-    }
-
-    /* ── Scroll up button posisi ── */
-    #scroll-up {
-        bottom: 20px !important;
-        right: 16px !important;
-    }
-
-    /* ── Stats bar di testimonials ── */
-    #association .association-content span {
-        font-size: 0.85rem;
-        padding: 4px 8px;
-    }
 
     /* ── Single image holder ── */
     .single-image-holder img {
-        max-height: 260px;
+        max-height: 240px;
         width: auto;
         margin: 0 auto;
         display: block;
-    }
-
-    /* ── Btn wrap center di mobile ── */
-    .btn-wrap {
-        justify-content: center !important;
-        text-align: center;
     }
 
     /* ── Container padding ── */
@@ -573,28 +619,24 @@ a.add-to-cart:hover {
         padding-left: 16px !important;
         padding-right: 16px !important;
     }
+
+    /* ── Scroll up button ── */
+    #scroll-up {
+        bottom: 20px !important;
+        right: 16px !important;
+    }
 }
 
 @media (max-width: 400px) {
-    /* Sangat kecil: product grid 1 kolom */
-    .herb-items .col-md-3,
-    .herb-items .col-md-4 {
+    .banner-title { font-size: 1.25rem !important; }
+    /* Sangat kecil: product 1 kolom */
+    .col-6.col-md-3 {
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    .intro-swiper .banner-title {
-        font-size: 1.3rem !important;
-    }
 }
 
+/* ── Maps container ── */
+.maps-container { height: 480px; }
 
-/* ── Maps container responsive ── */
-.maps-container {
-    height: 480px;
-}
-@media (max-width: 767px) {
-    .maps-container {
-        height: 220px;
-    }
-}
