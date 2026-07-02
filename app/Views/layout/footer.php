@@ -120,15 +120,39 @@ $waNumber  = $waNumber  ?? '6288218247268';
 	var menuToggle = document.getElementById("menu-toggle");
 	var navigation = document.getElementById("navigation");
 	if (menuToggle && navigation) {
+		var menuOpen = false;
+
+		// Set initial state untuk mobile
+		function setMenuState() {
+			if (window.innerWidth < 992) {
+				if (!menuOpen) {
+					navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
+				}
+			} else {
+				navigation.style.cssText = '';
+				menuOpen = false;
+				menuToggle.classList.remove("active");
+			}
+		}
+
+		setMenuState();
+		window.addEventListener('resize', setMenuState);
+
 		menuToggle.addEventListener("click", function() {
-			navigation.classList.toggle("open");
-			// Animasi hamburger → X
+			menuOpen = !menuOpen;
+			if (menuOpen) {
+				navigation.style.cssText = 'display:block!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
+			} else {
+				navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
+			}
 			this.classList.toggle("active");
 		});
+
 		// Tutup menu saat link diklik
 		navigation.querySelectorAll("a:not(.dropdown-toggle)").forEach(function(link) {
 			link.addEventListener("click", function() {
-				navigation.classList.remove("open");
+				menuOpen = false;
+				navigation.style.cssText = 'display:none!important;position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);background:rgba(248,241,241,0.98);z-index:9998;overflow-y:auto;padding:20px 0;';
 				menuToggle.classList.remove("active");
 			});
 		});
