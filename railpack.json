@@ -1,5 +1,0 @@
-{
-  "php": {
-    "extensions": ["intl", "mbstring", "mysqlnd", "pdo_mysql", "opcache", "sodium"]
-  }
-}
